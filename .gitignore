@@ -1,0 +1,75 @@
+# Node / Front‑end artifacts
+node_modules/
+/dist/
+/build/
+.vite/
+.cache/
+public/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Python / Backend artifacts
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.dist/
+*.wheel/
+*.log
+*.sqlite3
+*.db
+
+# Environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+
+# Data / ML artefacts
+datasets/
+data/
+uploads/
+logs/
+jobs/
+*.csv
+*.parquet
+*.pkl
+*.joblib
+*.db
+*.sqlite
+
+# Reports / Docs generated at runtime
+reports/
+output/
+*.pdf
+
+# Test / Coverage
+coverage/
+htmlcov/
+*.cover
+*.coverage
+*.lcov
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+# Frontend build output
+frontend/dist/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Local project files
+structure.txt
