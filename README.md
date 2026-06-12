@@ -1,51 +1,243 @@
-# Sentinel‑X
+Your current README is **okay**, but it looks like a developer note, not a project that grabs attention.
 
-**Sentinel‑X** is a modern cyber‑security platform that provides:
+For a project like **Sentinel-X AI SOC Analyst**, I'd structure it like this:
 
-- Threat analysis with Isolation Forest & Random Forest models
-- Live asset scanning
-- MITRE ATT&CK mapping
-- AI‑generated SOC reports (Gemini)
-- PDF export and executive dashboards
+---
 
-It consists of a **React + TypeScript + Vite** frontend (Tailwind) and a **FastAPI** backend.
+# Sentinel-X AI SOC Analyst
 
-## Repository layout (inside `github/`)
+AI-powered Security Operations Center (SOC) platform for threat detection, asset exposure intelligence, risk assessment, and automated security reporting.
+
+![Dashboard](Screenshots/dashboard-overview.png)
+
+---
+
+## Features
+
+### Threat Analysis Engine
+
+* Isolation Forest anomaly detection
+* Random Forest threat classification
+* MITRE ATT&CK technique mapping
+* Threat severity scoring
+* AI-generated analyst reports
+
+### Asset Exposure Intelligence
+
+* Live host and port scanning
+* Exposure assessment
+* Risk scoring
+* Vulnerability reporting
+* Asset inventory overview
+
+### AI Security Reporting
+
+* Google Gemini integration
+* Executive security summaries
+* SOC analyst explanations
+* Incident impact assessment
+* PDF report generation
+
+### Interactive Security Dashboard
+
+* Attack spike visualization
+* Threat distribution analytics
+* Top source IP tracking
+* Target port analysis
+* Model performance monitoring
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+
+### Backend
+
+* FastAPI
+* Python
+* Scikit-Learn
+* Pandas
+* Polars
+
+### AI & Machine Learning
+
+* Google Gemini
+* Isolation Forest
+* Random Forest
+* Threat Intelligence Engine
+
+---
+
+## Architecture
+
+```text
+CSV Network Traffic
+        │
+        ▼
+Data Processing
+        │
+        ▼
+Isolation Forest
+(Anomaly Detection)
+        │
+        ▼
+Random Forest
+(Classification)
+        │
+        ▼
+Threat Intelligence
+        │
+        ▼
+Gemini AI Analysis
+        │
+        ▼
+SOC Dashboard & PDF Reports
 ```
-.github/                # GitHub Actions workflows
-│   └─ workflows/
-│        └─ ci.yml      # CI pipeline
-.gitignore              # Ignored files
-README.md                # This file
-CONTRIBUTING.md          # How to contribute
-LICENSE                  # MIT License
-netlify.toml            # Netlify configuration
-Procfile                # Render start command
-.env.example            # Backend env template (do not commit actual secrets)
-.env.frontend.example   # Frontend Vite env template
-```
 
-## Quick start (local development)
+---
+
+## Screenshots
+
+### Threat Analysis Dashboard
+
+![Threat Analysis](Screenshots/dashboard-overview.png)
+
+---
+
+### Asset Exposure Intelligence
+
+![Asset Scan](Screenshots/asset-scan-summary.png)
+
+---
+
+### Asset Scan Results
+
+![Asset Results](Screenshots/asset-scan-results.png.png)
+
+---
+
+### Threat Visualization
+
+![Charts](Screenshots/threat-analysis-charts.png)
+
+---
+
+### Threat Investigation Table
+
+![Table](Screenshots/threat-analysis-table.png)
+
+---
+
+## Installation
+
+### Clone Repository
+
 ```bash
-# Clone repo
-git clone <repo-url>
-cd sentinel-x
+git clone https://github.com/irfanahmed0019/sentinel-x-ai-soc-analyst.git
+cd sentinel-x-ai-soc-analyst
+```
 
-# Backend setup
-cp github/.env.example backend/.env   # fill in your keys
-python -m pip install -r backend/requirements.txt
+---
+
+### Backend Setup
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+
 uvicorn main:app --reload
+```
 
-# Frontend setup
-cp github/.env.frontend.example frontend/.env
+Backend runs at:
+
+```text
+http://localhost:8000
+```
+
+---
+
+### Frontend Setup
+
+```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-## Deployment
-- **Frontend** → Netlify. Set `VITE_API_URL` environment variable to your backend URL.
-- **Backend** → Render. Provide the same env vars (`GEMINI_API_KEY`, `FASTAPI_SECRET_KEY`, etc.) and Render will use the `Procfile`.
+Frontend runs at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Machine Learning Pipeline
+
+### Isolation Forest
+
+Used for:
+
+* Unsupervised anomaly detection
+* Unknown threat discovery
+* Behavioral deviation analysis
+
+### Random Forest
+
+Used for:
+
+* Threat classification
+* Risk prediction
+* Attack categorization
+
+---
+
+## Example Detection Results
+
+| Metric             | Value     |
+| ------------------ | --------- |
+| Records Analyzed   | 2,520,751 |
+| Highest Risk Score | 83        |
+| Medium Risk Events | 321,833   |
+| High Risk Events   | 13,116    |
+| Most Common Attack | DDoS      |
+
+---
+
+## Future Improvements
+
+* Docker deployment
+* Real-time packet capture
+* SIEM integration
+* Threat intelligence feeds
+* Multi-user authentication
+* SOC case management
+* Kubernetes deployment
+
+---
+
+## Author
+
+**Irfan Ahmed**
+
+GitHub:
+[https://github.com/irfanahmed0019](https://github.com/irfanahmed0019)
+
+---
 
 ## License
-MIT – see the `LICENSE` file.
+
+MIT License
+
+---
+
+This version looks much more like a serious cybersecurity project. The screenshots immediately show the work, the architecture explains the pipeline, and recruiters can understand the project within 30 seconds.
