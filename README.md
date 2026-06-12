@@ -278,7 +278,7 @@ sentinel-x-ai-soc-analyst/
 
 ## Author
 
-Irfan Ahmed
+Irfan Ahammad J
 
 GitHub:
 https://github.com/irfanahmed0019
