@@ -37,7 +37,9 @@ import {
 import { CATEGORY_LABELS } from "./threatLabels";
 import { AiProvider, ProgressEvent, Report, ThreatCategory, ThreatRow } from "./types";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ??
+  "https://sentinel-x-ai-soc-analyst-production.up.railway.app";
 
 function formatNumber(value: number | undefined) {
   return typeof value === "number" ? value.toLocaleString() : "0";
@@ -89,7 +91,10 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<"threat" | "scan">("threat");
   const reportRef = useRef<HTMLDivElement>(null);
   const [filters, setFilters] = useState<{severity?: string; src?: string; dst?: string}>({});
-
+  useEffect(() => {
+  console.log("API_BASE =", API_BASE);
+}, []);
+  
   async function startAnalysis() {
     if (!file) {
       setError("Choose a CSV file first.");
@@ -1563,7 +1568,7 @@ function LiveAssetScan({ provider, geminiKey, ollamaModel }: { provider: AiProvi
     setScanResult(null);
     try {
       let cleanTarget = target.replace("https://", "").replace("http://", "").split("/")[0];
-      let url = `http://localhost:8000/api/scan?target=${encodeURIComponent(cleanTarget)}`;
+      let url = `${API_BASE}/api/scan?target=${encodeURIComponent(cleanTarget)}`;
       if (useAi) {
         url += `&ai_provider=${provider}`;
         if (provider === "gemini") {
