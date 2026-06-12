@@ -1,7 +1,3 @@
-Your current README is **okay**, but it looks like a developer note, not a project that grabs attention.
-
-For a project like **Sentinel-X AI SOC Analyst**, I'd structure it like this:
-
 ---
 
 # Sentinel-X AI SOC Analyst
@@ -239,5 +235,3 @@ GitHub:
 MIT License
 
 ---
-
-This version looks much more like a serious cybersecurity project. The screenshots immediately show the work, the architecture explains the pipeline, and recruiters can understand the project within 30 seconds.
