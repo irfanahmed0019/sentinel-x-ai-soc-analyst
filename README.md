@@ -108,13 +108,13 @@ SOC Dashboard & PDF Reports
 
 ### Asset Exposure Intelligence
 
-![Asset Scan](Screenshots/asset-scan-summary.png)
+![Asset Scan](Screenshots/asset-scan-results.png)
 
 ---
 
 ### Asset Scan Results
 
-![Asset Results](Screenshots/asset-scan-results.png.png)
+![Asset Results](Screenshots/asset-scan-summary.png)
 
 ---
 
