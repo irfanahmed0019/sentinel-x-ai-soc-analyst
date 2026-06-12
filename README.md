@@ -1,46 +1,60 @@
----
-
 # Sentinel-X AI SOC Analyst
 
-AI-powered Security Operations Center (SOC) platform for threat detection, asset exposure intelligence, risk assessment, and automated security reporting.
+AI-powered Security Operations Center (SOC) platform for network threat detection, asset exposure intelligence, machine learning-based security analytics, MITRE ATT&CK mapping, and automated SOC reporting.
 
 ![Dashboard](Screenshots/dashboard-overview.png)
 
 ---
 
-## Features
+## Overview
+
+Sentinel-X is a full-stack cybersecurity platform designed to help security analysts identify threats, assess asset exposure, and generate executive security reports.
+
+The platform combines:
+
+- Isolation Forest anomaly detection
+- Random Forest threat classification
+- MITRE ATT&CK mapping
+- AI-powered threat analysis using Google Gemini
+- Interactive SOC dashboards
+- Automated PDF report generation
+
+---
+
+## Key Features
 
 ### Threat Analysis Engine
 
-* Isolation Forest anomaly detection
-* Random Forest threat classification
-* MITRE ATT&CK technique mapping
-* Threat severity scoring
-* AI-generated analyst reports
+- Isolation Forest anomaly detection
+- Random Forest threat classification
+- Risk scoring engine
+- Threat severity categorization
+- MITRE ATT&CK technique mapping
+- AI-generated analyst explanations
 
 ### Asset Exposure Intelligence
 
-* Live host and port scanning
-* Exposure assessment
-* Risk scoring
-* Vulnerability reporting
-* Asset inventory overview
+- Live host scanning
+- Port exposure assessment
+- Asset risk scoring
+- Vulnerability assessment
+- Exposure intelligence reporting
 
 ### AI Security Reporting
 
-* Google Gemini integration
-* Executive security summaries
-* SOC analyst explanations
-* Incident impact assessment
-* PDF report generation
+- Google Gemini integration
+- Executive security summaries
+- Business impact analysis
+- Threat remediation guidance
+- Automated PDF SOC reports
 
-### Interactive Security Dashboard
+### Security Analytics Dashboard
 
-* Attack spike visualization
-* Threat distribution analytics
-* Top source IP tracking
-* Target port analysis
-* Model performance monitoring
+- Attack spike timeline
+- Threat distribution analysis
+- Top source IP identification
+- Target port analytics
+- ML model performance monitoring
 
 ---
 
@@ -48,52 +62,55 @@ AI-powered Security Operations Center (SOC) platform for threat detection, asset
 
 ### Frontend
 
-* React
-* TypeScript
-* Vite
-* Tailwind CSS
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
 ### Backend
 
-* FastAPI
-* Python
-* Scikit-Learn
-* Pandas
-* Polars
+- FastAPI
+- Python
+- Pandas
+- Polars
+- Scikit-Learn
 
-### AI & Machine Learning
+### Machine Learning
 
-* Google Gemini
-* Isolation Forest
-* Random Forest
-* Threat Intelligence Engine
+- Isolation Forest
+- Random Forest
+- Threat Intelligence Engine
+
+### AI
+
+- Google Gemini
 
 ---
 
 ## Architecture
 
 ```text
-CSV Network Traffic
-        │
-        ▼
-Data Processing
-        │
-        ▼
-Isolation Forest
-(Anomaly Detection)
-        │
-        ▼
-Random Forest
-(Classification)
-        │
-        ▼
-Threat Intelligence
-        │
-        ▼
-Gemini AI Analysis
-        │
-        ▼
-SOC Dashboard & PDF Reports
+Network Traffic Dataset
+          │
+          ▼
+   Data Processing
+          │
+          ▼
+  Isolation Forest
+  (Anomaly Detection)
+          │
+          ▼
+   Random Forest
+ (Threat Detection)
+          │
+          ▼
+ Threat Intelligence
+          │
+          ▼
+  Gemini AI Analysis
+          │
+          ▼
+ SOC Dashboard + PDF Reports
 ```
 
 ---
@@ -104,29 +121,68 @@ SOC Dashboard & PDF Reports
 
 ![Threat Analysis](Screenshots/dashboard-overview.png)
 
----
-
 ### Asset Exposure Intelligence
 
 ![Asset Scan](Screenshots/asset-scan-results.png)
-
----
 
 ### Asset Scan Results
 
 ![Asset Results](Screenshots/asset-scan-summary.png)
 
----
-
 ### Threat Visualization
 
 ![Charts](Screenshots/threat-analysis-charts.png)
 
----
-
 ### Threat Investigation Table
 
 ![Table](Screenshots/threat-analysis-table.png)
+
+---
+
+## Sample SOC Report
+
+Sentinel-X automatically generates professional SOC intelligence reports.
+
+📄 Sample PDF Report:
+
+[View Sample Report](Sample-Reports/SENTINEL-X-SOC-Report-Sample.pdf)
+
+Report includes:
+
+- Executive Dashboard
+- AI Threat Analysis
+- MITRE ATT&CK Mapping
+- Top Threat Events
+- Network Intelligence
+- Risk Assessment
+- ML Performance Metrics
+- Security Recommendations
+
+---
+
+## Machine Learning Performance
+
+Using the CICIDS2017 dataset:
+
+| Metric | Score |
+|----------|----------|
+| Accuracy | 99.67% |
+| Precision | 99.73% |
+| Recall | 99.67% |
+| F1 Score | 99.69% |
+
+---
+
+## Example Detection Results
+
+| Metric | Value |
+|----------|----------|
+| Records Analyzed | 2,520,751 |
+| Highest Risk Score | 83 |
+| Medium Risk Events | 321,833 |
+| High Risk Events | 13,116 |
+| Most Common Attack | DDoS |
+| Campaign Severity | HIGH |
 
 ---
 
@@ -136,6 +192,7 @@ SOC Dashboard & PDF Reports
 
 ```bash
 git clone https://github.com/irfanahmed0019/sentinel-x-ai-soc-analyst.git
+
 cd sentinel-x-ai-soc-analyst
 ```
 
@@ -151,7 +208,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-Backend runs at:
+Backend:
 
 ```text
 http://localhost:8000
@@ -169,7 +226,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs at:
+Frontend:
 
 ```text
 http://localhost:5173
@@ -177,61 +234,57 @@ http://localhost:5173
 
 ---
 
-## Machine Learning Pipeline
+## MITRE ATT&CK Coverage
 
-### Isolation Forest
+Current detections include mappings such as:
 
-Used for:
-
-* Unsupervised anomaly detection
-* Unknown threat discovery
-* Behavioral deviation analysis
-
-### Random Forest
-
-Used for:
-
-* Threat classification
-* Risk prediction
-* Attack categorization
+| Technique | Description |
+|------------|-------------|
+| T1498 | Network Denial of Service |
+| T1499 | Endpoint Denial of Service |
+| T1046 | Network Service Discovery |
+| T1110 | Brute Force |
 
 ---
 
-## Example Detection Results
+## Project Structure
 
-| Metric             | Value     |
-| ------------------ | --------- |
-| Records Analyzed   | 2,520,751 |
-| Highest Risk Score | 83        |
-| Medium Risk Events | 321,833   |
-| High Risk Events   | 13,116    |
-| Most Common Attack | DDoS      |
+```text
+sentinel-x-ai-soc-analyst/
+
+├── backend/
+├── frontend/
+├── Screenshots/
+├── Sample-Reports/
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## Future Improvements
 
-* Docker deployment
-* Real-time packet capture
-* SIEM integration
-* Threat intelligence feeds
-* Multi-user authentication
-* SOC case management
-* Kubernetes deployment
+- Docker deployment
+- Real-time packet capture
+- SIEM integration
+- Threat intelligence feeds
+- Multi-user authentication
+- Case management workflow
+- Kubernetes deployment
+- RBAC support
+- Alerting engine
 
 ---
 
 ## Author
 
-**Irfan Ahmed**
+Irfan Ahmed
 
 GitHub:
-[https://github.com/irfanahmed0019](https://github.com/irfanahmed0019)
+https://github.com/irfanahmed0019
 
 ---
 
 ## License
 
 MIT License
-
----
