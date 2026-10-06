@@ -1,4 +1,4 @@
-# Sentinel-X AI SOC Analyst
+# AI SOC Analyst
 
 AI-powered Security Operations Center (SOC) platform for network threat detection, asset exposure intelligence, machine learning-based security analytics, MITRE ATT&CK mapping, and automated SOC reporting.
 
@@ -8,12 +8,13 @@ AI-powered Security Operations Center (SOC) platform for network threat detectio
 
 ## Overview
 
-Sentinel-X is a full-stack cybersecurity platform designed to help security analysts identify threats, assess asset exposure, and generate executive security reports.
+AI SOC Analyst is a full-stack cybersecurity platform that uses machine learning models such as Random Forest and Isolation Forest, with XGBoost and SHAP for explainability, to help security analysts identify threats, assess asset exposure, and generate executive security reports.
 
 The platform combines:
 
 - Isolation Forest anomaly detection
 - Random Forest threat classification
+- XGBoost and SHAP explainability
 - MITRE ATT&CK mapping
 - AI-powered threat analysis using Google Gemini
 - Interactive SOC dashboards
@@ -79,6 +80,8 @@ The platform combines:
 
 - Isolation Forest
 - Random Forest
+- XGBoost
+- SHAP
 - Threat Intelligence Engine
 
 ### AI
@@ -141,7 +144,7 @@ Network Traffic Dataset
 
 ## Sample SOC Report
 
-Sentinel-X automatically generates professional SOC intelligence reports.
+AI SOC Analyst automatically generates professional SOC intelligence reports.
 
 📄 Sample PDF Report:
 
